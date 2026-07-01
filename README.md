@@ -16,7 +16,6 @@ Um aplicativo de linha de comando em Python para cadastrar, listar, pesquisar, e
 
 - Python 3
 - SQLite3 (banco de dados local)
-- Pydantic (validação de dados)
 - CSV (exportação)
 
 ## 📦 Estrutura de Arquivos
@@ -77,17 +76,11 @@ Escolha o que deseja fazer:
   - Status (1 = Lido, 2 = Na fila)
 
 - Com `2`, você verá uma tabela com os livros cadastrados.
-
-## 📝 Log de Atividades
-
-O programa registra automaticamente ações e erros no arquivo `livros.log` para facilitar o rastreamento de problemas.
-
-## 🛡️ Validação de Dados
-
-Todos os dados inseridos são validados com `Pydantic`:
-- Nome e categoria não podem estar vazios.
-- Número de páginas deve ser um inteiro maior que 0.
-- Status deve ser um booleano.
+- Com `3`, você atualizara os status do livro.
+- Com `4`, você pesquisa um livro especifico.
+- com `5`, você exporta para um arquivo excel (.csv).
+- Com `6`, você remove determinado item.
+- Com `7`, reinicia o banco de dados.
 
 ## 📤 Exportação para CSV
 
@@ -99,11 +92,3 @@ A opção 7 apaga o banco `livros.db` e recria a estrutura da tabela do zero.
 
 ⚠️ **Aviso:** essa ação remove todos os livros cadastrados!
 
-## 📌 Observações
-
-- O projeto usa SQLite local e não exige instalação ou configuração externa de banco de dados.
-- Funciona em Windows, Linux e macOS.
-
----
-
-Feito com ❤️ para organizar sua estante digital!
