@@ -17,7 +17,6 @@ Um aplicativo de linha de comando em Python para cadastrar, listar, pesquisar, e
 - Python 3
 - SQLite3 (banco de dados local)
 - Pydantic (validação de dados)
-- Logging (registro de erros e ações)
 - CSV (exportação)
 
 ## 📦 Estrutura de Arquivos
