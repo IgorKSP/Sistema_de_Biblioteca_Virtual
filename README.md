@@ -1,6 +1,6 @@
 # 📚 Gerenciador de Livros
 
-Um aplicativo de linha de comando em Python para cadastrar, listar, pesquisar, excluir e exportar livros usando SQLite como banco de dados e Pydantic para validação de dados. Ideal para organizar sua leitura de forma prática e simples.
+Um aplicativo de linha de comando em Python para cadastrar, listar, pesquisar, excluir e exportar livros usando SQLite como banco de dados. Ideal para organizar sua leitura de forma prática e simples.
 
 ## 🚀 Funcionalidades
 
@@ -15,45 +15,12 @@ Um aplicativo de linha de comando em Python para cadastrar, listar, pesquisar, e
 ## 🛠️ Tecnologias Utilizadas
 
 - Python 3
-- SQLite3 (banco de dados local)
+- SQL (banco de dados local)
 - CSV (exportação)
-
-## 📦 Estrutura de Arquivos
-
-```
-proj-livro/
-│
-├── modelos/
-│   └── livro.py       # Classe Livro com lógica e integração com SQLite
-├── main.py            # Menu interativo e controle de execução
-└── README.md          # Este arquivo
-```
-
-## ⚙️ Requisitos
-
-- Python 3.8+
-- Biblioteca Pydantic (instale com o pip abaixo)
-
-```bash
-pip install pydantic
-```
 
 ## ▶️ Como usar
 
-1. Clone o repositório ou copie os arquivos para sua máquina:
-
-```bash
-git clone https://github.com/seuusuario/proj-livro.git
-cd proj-livro
-```
-
-2. Execute o script principal:
-
-```bash
-python main.py
-```
-
-3. Siga as instruções no menu:
+Siga as instruções no menu:
 
 ```
 Escolha o que deseja fazer:
@@ -67,7 +34,7 @@ Escolha o que deseja fazer:
 7 - Resetar banco de dados
 ```
 
-## 🧪 Exemplo de uso
+## 🧪 Explicação de menu:
 
 - Ao escolher `1`, o programa pedirá:
   - Nome do livro
@@ -75,11 +42,11 @@ Escolha o que deseja fazer:
   - Categoria
   - Status (1 = Lido, 2 = Na fila)
 
-- Com `2`, você verá uma tabela com os livros cadastrados.
-- Com `3`, você atualizara os status do livro.
-- Com `4`, você pesquisa um livro especifico.
-- com `5`, você exporta para um arquivo excel (.csv).
-- Com `6`, você remove determinado item.
+- Com `2`, verá uma lista com os livros cadastrados.
+- Com `3`, atualizara os status do livro.
+- Com `4`, pesquisa um livro especifico.
+- com `5`, exporta para um arquivo excel (.csv).
+- Com `6`, remove determinado item.
 - Com `7`, reinicia o banco de dados.
 
 ## 📤 Exportação para CSV
