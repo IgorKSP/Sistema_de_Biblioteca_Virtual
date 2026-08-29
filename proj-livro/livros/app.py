@@ -51,13 +51,13 @@ def pesquisar():
     Livro.filtrar(pesquisa)
 
 def remover():
-    print('Removendo item: \n')
+    print('Removendo Livro: \n')
     try:
-        id = int(input('ID do livro a ser excluido: '))
+        id_livro = int(input('Id do livro a ser excluido: ')
     except ValueError:
         print('Dado inválido')
         return
-    Livro.deletar_item(id)
+    Livro.deletar_item(id_livro)
 
 def executar(resposta:int) -> None:
     try:
