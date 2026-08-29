@@ -135,20 +135,15 @@ class Livro:
         print('Banco de dados resetado.')
 
     @staticmethod
-    def deletar_item(palavra_chave):
-        palavra = f'%{palavra_chave.strip()}%'
-        sql = '''
-            DELETE FROM livros
-            WHERE nome LIKE ? OR id LIKE ?
-        '''
-        deletado = Livro.chamarbd(sql, (palavra, palavra), delt=True)
-
+    def deletar_item(id_livro):
+        sql = 'DELETE FROM livros WHERE id = ?'
+        deletado = livro.chamardb(sql, (id_livro,), delt=True)
         if deletado:
-            print('Item excluído.')
-            logging.info('Livro ID %s excluído', palavra)
+            print('Item excluido.')
+            logging.info('Livro ID %s excluído', id_livro)
         else:
             print('Livro não encontrado.')
-            logging.warning('Tentativa de deletar ID inexistente: %s', palavra)
+            logging.warning('Tentativa de deletar ID inexistente: %s', id_livro) 
 
     @staticmethod
     def exporta_csv(caminho='livros_exportado.csv'):
