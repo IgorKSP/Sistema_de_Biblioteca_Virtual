@@ -70,7 +70,7 @@ class Livro:
             VALUES (?, ?, ?, ?)
         '''
         resultado = Livro.chamarbd(sql, (self._nome, self._paginas, self._status, self._categoria))
-        if resultado is not None:
+        if resultado:
             logging.info('Livro salvo: %s', self._nome)
         else:
             logging.error('Falha ao salvar o livro: %s', self._nome)
